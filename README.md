@@ -18,7 +18,7 @@ Demonstrate that:
 { i * j + 2 * j + 3 * i = 0 }  
 j := j + 3;  
 i := i + 2;  
-{ (i) * (j) = 6 }
+{ i * j = 6 }
 
 We wrote a contract that captures the precondition and postcondition, and verified the function's correctness using Frama-C's WP plugin.
 
