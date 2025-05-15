@@ -11,7 +11,16 @@ Jerónimo Rodríguez Restrepo
   Tools used: Frama-C Version 30.0, WP plugin (with options -wp and -wp-rte)
 
 ## Description
-This assignment demonstrates the use of ACSL (ANSI/ISO C Specification Language) to formally specify and verify the behavior of a C function. We wrote a contract for the function provided in Exercise 5, Section 9.3, and verified the correctness of the implementation using Frama-C's WP plugin.
+This assignment uses ACSL to formally specify and verify a C function corresponding to the following exercise:
+
+**Exercise:**  
+Demonstrate that:  
+{ i * j + 2 * j + 3 * i = 0 }  
+j := j + 3;  
+i := i + 2;  
+{ (i) * (j) = 6 }
+
+We wrote a contract that captures the precondition and postcondition, and verified the function's correctness using Frama-C's WP plugin.
 
 ## Overview
 This assignment uses ACSL to define:
