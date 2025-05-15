@@ -54,11 +54,19 @@ void tarea(int i, int j) {
 
 5. A green mark indicates the contract is successfully verified.
 
+## Contract Explanation and Verification
+The ACSL contract specifies the expected behavior of the function tarea by defining preconditions and a postcondition:
+
+  -Preconditions (requires): These conditions restrict the valid input values for the function parameters i and j. In this case, i and j must be between -10 and 10, and must satisfy the equation i     *j + 2 * j + 3 * i == 0 before the function executes.
+
+  -Postcondition (ensures): This condition must hold true after the function execution. It states that after updating i and j (by adding 2 and 3, respectively), the product (i + 2) * (j + 3) should    equal 6.
+
+  Frama-C's WP plugin uses these annotations to formally verify that the implementation of the function respects the specified contract. When the verification succeeds, it guarantees that for all     inputs meeting the preconditions, the postcondition will always be true after executing the function. This helps ensure the correctness of the code according to its formal specification.
+
 ## Repository Contents
 This repository contains only the essential files for this assignment:  
   tarea3.c – C function with ACSL contract  
   README.md – This documentation file  
-  documentation.pdf – Explanation of the contract  
   video.mp4 – Presentation of the work
 
 ## References
